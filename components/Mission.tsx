@@ -3,7 +3,7 @@ import styles from '../styles/Mission.module.scss';
 
 export const Mission = () => {
   return (
-    <div className={styles.mission}>
+    <div id="mission" className={styles.mission}>
     <div className={styles.mission__info}>
       <h2>Our Mission</h2>
       <h4>

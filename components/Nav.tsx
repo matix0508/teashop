@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import Image from "next/image";
 import styles from "../styles/Nav.module.scss";
+import { NavItem } from "./NavItem";
 
 interface INav {
   items: string[];
@@ -21,9 +22,7 @@ export const Nav: FC<INav> = ({ items }) => {
 
       <ul className={styles.nav__items}>
         {items.map((item, i) => (
-          <li key={i} className={styles.nav__items__item}>
-            {item}
-          </li>
+          <NavItem key={i} item={item} />
         ))}
       </ul>
     </nav>

@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { Featured } from "../components/Featured";
+import { FeaturedItem } from "../components/FeaturedItem";
 import { Mission } from "../components/Mission";
 import { Nav } from "../components/Nav";
 
@@ -8,14 +10,30 @@ const Home: NextPage = () => {
   return (
     <>
       <Nav items={navItems} />
-      <Mission />
-
-      <div className="newsfeed">
-        <div className="newsfeed__header">
-          <h2>Tea of the month</h2>
-          <h4>What's Steeping at the Tea Cozy?</h4>
-        </div>
-        <div className="newsfeed__items"></div>
+      <div className="main">
+        <Mission />
+        <Featured>
+          <FeaturedItem
+            title={"Fall Berry Blitz Tea"}
+            src={"/images/img-berryblitz.webp"}
+          />
+          <FeaturedItem
+            title={"Spiced Rum Tea"}
+            src={"/images/img-spiced-rum.jpg"}
+          />
+          <FeaturedItem
+            title={"Fall Berry Blitz Tea"}
+            src={"/images/img-berryblitz.webp"}
+          />
+          <FeaturedItem
+            title={"Fall Berry Blitz Tea"}
+            src={"/images/img-berryblitz.webp"}
+          />
+          <FeaturedItem
+            title={"Fall Berry Blitz Tea"}
+            src={"/images/img-berryblitz.webp"}
+          />
+        </Featured>
       </div>
     </>
     // <div className={styles.container}>
