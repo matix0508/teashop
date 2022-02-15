@@ -1,0 +1,23 @@
+.nav {
+    position: sticky;
+    display: flex;
+    height: 69px;
+    border-bottom: 1px solid seashell;
+
+    &__logo {
+        height: 50px;
+        padding: 10px;
+    }
+
+    &__items {
+        list-style: none;
+        display: inline-flex;
+        justify-content: flex-end;
+        width: 100vw;
+
+        &__item {
+            padding-right: 1rem;
+            text-decoration: underline;
+        }
+    }
+}
