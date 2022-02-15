@@ -1,3 +1,5 @@
+# The Tea Cozy Website
+The website for the project in codecademy.com Implemented using Next.js and Typescript
 
 ## Technologies
 - React.js
