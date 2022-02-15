@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { Contact } from "../components/Contact";
 import { Featured } from "../components/Featured";
 import { Locations } from "../components/Locations";
 import { Mission } from "../components/Mission";
@@ -8,7 +9,7 @@ import { Location } from "../types/Location";
 import { Tea } from "../types/Tea";
 
 const Home: NextPage = () => {
-  const navItems = ["Mission", "Featured Tea", "Locations"];
+  const navItems = ["Mission", "Featured Tea", "Locations", "Contact"];
   const teaKinds: Tea[] = [
     {
       title: "Fall Berry Blitz Tea",
@@ -64,6 +65,7 @@ const Home: NextPage = () => {
         <Mission />
         <Featured items={teaKinds}/>
         <Locations items={locationsItems} />
+        <Contact />
       </main>
     </>
   );
