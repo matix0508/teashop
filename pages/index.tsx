@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { Contact } from "../components/Contact";
 import { Featured } from "../components/Featured";
+import { Footer } from "../components/Footer";
 import { Locations } from "../components/Locations";
 import { Mission } from "../components/Mission";
 import { Nav } from "../components/Nav";
@@ -9,7 +10,7 @@ import { getLocationsItems } from "../services/getLocationsItems";
 import { getTeaKinds } from "../services/getTeaKinds";
 
 const Home: NextPage = () => {
-  const navItems = ["Mission", "Featured Tea", "Locations"];
+  const navItems = ["Mission", "Featured Tea", "Locations", "Contact"];
   const teaKinds = getTeaKinds();
   const locationsItems = getLocationsItems();
 
@@ -24,7 +25,11 @@ const Home: NextPage = () => {
         <Featured items={teaKinds} />
         <Locations items={locationsItems} />
         <Contact />
+       
       </main>
+      <Footer />
+      
+      
     </>
   );
 };
