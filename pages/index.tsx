@@ -1,8 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Featured } from "../components/Featured";
+import { Locations } from "../components/Locations";
 import { Mission } from "../components/Mission";
 import { Nav } from "../components/Nav";
+import { Location } from "../types/Location";
 import { Tea } from "../types/Tea";
 
 const Home: NextPage = () => {
@@ -31,6 +33,15 @@ const Home: NextPage = () => {
 
   ]
 
+  const locationsItems: Location[] = [
+    {
+      name: "Downtown",
+      address: "384 West 4th St.",
+      apartment: "Suite 108",
+      city: "Portland, Main"
+    }
+  ]
+
   return (
     <>
       <Head>
@@ -40,6 +51,7 @@ const Home: NextPage = () => {
       <main>
         <Mission />
         <Featured items={teaKinds}/>
+        <Locations items={locationsItems} />
       </main>
     </>
   );
