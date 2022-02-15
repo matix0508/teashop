@@ -9,7 +9,7 @@ interface ILocations {
 
 export const Locations: FC<ILocations> = ({ items }) => {
   return (
-    <div className={styles.locations}>
+    <div id="locations" className={styles.locations}>
       <h2>Locations</h2>
       <div className={styles.locations__items}>
         {items.map((item, i) => (
